@@ -8,17 +8,20 @@ body{
 }
 main{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 .container{
     background-color: #FFFFFF;
     width: 870px;
     padding: 30px;
+    margin-top: 21px;
 }
 
 hr{
     border: 1px solid #d1d1dd;
+    margin-bottom: 27px;
 }
 
 /* Top players style */
@@ -52,5 +55,116 @@ hr{
     margin-left: 16px;
     font-size: 18px;
 }
+
+/* top blog styles */
+.blogs{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 26px;
+}
+
+.blog{
+    display: flex;
+    padding-right: 30px;
+}
+
+.blog img{
+    width: 177px;
+    height: 117px;
+}
+
+.blog-info{
+    margin-left: 16px;
+}
+
+.blog-title{
+    font-size: 20px;
+}
+
+.blog-author{
+    color: #9F9F9F; 
+    font-size: 16px;
+}
+
+.blog-author a{
+    color: #562EFF;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+/* Latest Course */
+.courses{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 40px;
+}
+.course-banner img{
+    width: 224px;
+    height: 104px;
+}
+
+.course-info{
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.course-author{
+    color: #ED6B4F;
+    font-size: 15px;
+}
+
+.fa-star{
+    font-size: 12px;
+}
+
+.filled{
+    color: #FFC014;
+}
+
+.empty{
+    color: #AEAEAE;
+}
+
+.course-duration{
+    background-color: #FFE4E8;
+    padding: 5px;
+    border-radius: 30px;
+    color: #FF4A60;
+    margin: 10px;
+}
+
+/*----------------------
+     Media Queries
+-----------------------*/
+
+/* Mobile Devices */
+@media only screen and (max-width: 688px){
+    .container{
+        width: 100%;
+    }
+    .players, .blogs, .courses{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .player, .blog, .course{
+        flex-direction: column;
+    }
+}
+
+/* Tablet Devices */
+@media only screen and (min-width: 688px) and (max-width: 992px){
+    .container{
+        width: 100%;
+    }
+    .players, .blogs, .courses{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .player, .blog, .course{
+        flex-direction: column;
+    }
+}
+
+
 
 
